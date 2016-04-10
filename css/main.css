@@ -1,9 +1,5 @@
 /* =================================================================== */
 /*
-/*  KREO v1.0 Main Stylesheet
-/*  url: styleshout.com
-/*  10-12-2015
-/*
 /*	 TOC:
 /*  01. =webfonts and iconfonts
 /*  02. =document setup
@@ -312,7 +308,7 @@ img.pull-left {
 
 .yellowText {
 	color: #fdc501!important;
-font-weight:bolder!important;
+	font-weight:bolder!important;
 }
 /* block grids default paddings
 --------------------------------------------------------------------- */
