@@ -143,16 +143,16 @@
   	and dynamically prepend a.toggle-btn to #nav-wrap */
   	nav_wrap.find('a.mobile-btn').remove();
   	toggle_button.append(menu_icon);
-   nav_wrap.prepend(toggle_button);
+   	nav_wrap.prepend(toggle_button);
 
   	toggle_button.on("click", function(e) {
-   	e.preventDefault();
+   		e.preventDefault();
     	nav.slideToggle("fast");
   	});
 
   	if (toggle_button.is(':visible')) nav.addClass('mobile');
   	$(window).resize(function() {
-   	if (toggle_button.is(':visible')) nav.addClass('mobile');
+   		if (toggle_button.is(':visible')) nav.addClass('mobile');
     	else nav.removeClass('mobile');
   	});
 
