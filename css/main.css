@@ -310,6 +310,12 @@ img.pull-left {
 	color: #fdc501!important;
 	font-weight:bolder!important;
 }
+
+.blueText {
+	color: #00b1d8!important;
+	font-weight:bolder!important;
+}
+
 /* block grids default paddings
 --------------------------------------------------------------------- */
 .bgrid {
