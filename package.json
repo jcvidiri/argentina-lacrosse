@@ -1,0 +1,15 @@
+{
+  "name": "argentina-lacrosse",
+  "version": "1.0.0",
+  "author": "JCV",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "gulp-imagemin": "*",
+    "gulp-sourcemaps": "*",
+    "del":"*"
+  }
+}
