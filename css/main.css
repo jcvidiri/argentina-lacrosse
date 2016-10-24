@@ -1,29 +1,20 @@
-/* =================================================================== */
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  src: local('Ubuntu'), url(http://example.com/fonts/ubuntu.woff) format('woff');
+}
 /*
-/*	 TOC:
-/*  01. =webfonts and iconfonts
-/*  02. =document setup
-/*  03. =preloader
-/*  04. =forms
-/*  05. =theme common styles
-/*  06. =header styles
-/*  07. =hero section
-/*  08. =portfolio styles
-/*  09. =services
-/*  10. =about
-/*  11. =testimonials
-/*  12. =contact
-/*  13. =footer
+@font-face {
+ font-family: 'helvetica';
+ src: url('../fonts/Helvetica.otf') format('opentype');
+}*/
 /*
-/* =================================================================== */
-
-/**
-/* 01. =webfonts and iconfonts
-/* =================================================================== */
-
-@import url("fonts.css");
-@import url("font-awesome/css/font-awesome.min.css");
-
+body {
+  font-family: 'Ubuntu';
+}*/
 
 /**
 /* 02. =document setup
@@ -38,7 +29,7 @@ body {
 
 body {
 	background: #0F1215;
-	font: 16px/30px "merriweather-regular", serif;
+	font: 16px/30px "Ubuntu", serif;
 	font-weight: normal;
 	color: #575859;
 }
@@ -69,7 +60,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "raleway-heavy", sans-serif;
+	font-family: 'Ubuntu';
 	color: #FFFFFF;
 	font-style: normal;
 	text-rendering: optimizeLegibility;
@@ -132,18 +123,18 @@ p img {
 }
 
 p.lead {
-	font: 20px/36px "merriweather-light", serif;
+	font: 20px/36px "Ubuntu", serif;
 	color: #707273;
 }
 
 em {
-	font: 16px/30px "merriweather-italic", serif;
+	font: 16px/30px "Ubuntu", serif;
 	font-style: normal;
 }
 
 strong,
 b {
-	font: 16px/30px "merriweather-bold", serif;
+	font: 16px/30px "Ubuntu", serif;
 	font-weight: normal;
 }
 
@@ -164,14 +155,14 @@ blockquote:before {
 	font-size: 80px;
 	line-height: 0px;
 	margin: 0;
-	font-family: arial, sans-serif;
+	font-family: 'Ubuntu';
 	position: absolute;
 	top: 30px;
 	left: 0;
 }
 
 blockquote p {
-	font-family: georgia, serif;
+	font-family: 'Ubuntu';
 	font-style: italic;
 	padding: 0;
 	font-size: 18px;
@@ -196,7 +187,7 @@ blockquote cite a:visited {
 }
 
 abbr {
-	font-family: "merriweather-bold", serif;
+	font-family: 'Ubuntu';
 	font-variant: small-caps;
 	text-transform: lowercase;
 	letter-spacing: .5px;
@@ -450,7 +441,7 @@ select {
 	outline: none;
 	vertical-align: middle;
 	color: #a3a4a6;
-	font-family: "raleway-bold", sans-serif;
+	font-family: 'Ubuntu';
 	font-size: 15px;
 	line-height: 24px;
 	border-radius: 3px;
@@ -483,7 +474,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
 	display: inline-block;
-	font: 16px/30px "raleway-heavy", sans-serif;
+	font: 16px/30px "Ubuntu", sans-serif;
 	padding: 9px 16px;
 	margin: 0 3px 6px 0;
 	background:#00b1d8;
@@ -514,7 +505,7 @@ input[type="button"]:hover {
 
 label,
 legend {
-	font: 15px/30px "raleway-bold", sans-serif;
+	font: 15px/30px "Ubuntu-bold", sans-serif;
 	margin: 12px 0;
 	color: #252525;
 	display: block;
@@ -523,7 +514,7 @@ legend {
 label span,
 legend span {
 	color: #575859;
-	font: 16px/30px "raleway-bold", sans-serif;
+	font: 16px/30px "Ubuntu-bold", sans-serif;
 }
 
 input[type="checkbox"],
@@ -567,7 +558,7 @@ hr {
 
 /* sections */
 .section-head h1 {
-	font: 15px/30px "raleway-heavy", sans-serif;
+	font: 15px/30px "Ubuntu", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2.5px;
 	color: #FFFFFF;
@@ -582,7 +573,7 @@ hr {
 }
 
 .section-head p {
-	font: 20px/36px "merriweather-light", serif;
+	font: 20px/36px "Ubuntu", serif;
 	width: 95%;
 }
 
@@ -598,7 +589,7 @@ hr {
 	}
 
 	.section-head p {
-		font: 18px/36px "merriweather-light", serif;
+		font: 18px/36px "Ubuntu", serif;
 		width: auto;
 	}
 
@@ -611,7 +602,7 @@ hr {
 
 @media only screen and (max-width:600px) {
 	.section-head p {
-		font: 17px/33px "merriweather-light", serif;
+		font: 17px/33px "Ubuntu", serif;
 		width: auto;
 	}
 
@@ -741,7 +732,7 @@ header .header-social li a:hover {
 
 /* nav-wrap */
 #nav-wrap {
-	font: 13px "raleway-heavy", sans-serif;
+	font: 13px "Ubuntu", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
 	float: left;
@@ -1000,7 +991,7 @@ ul#nav li.current a:after {
 }
 
 #hero-slider .slides .flex-caption h1 {
-	font: 49px/1.3 "raleway-bold", sans-serif;
+	font: 49px/1.3 "Ubuntu", sans-serif;
 	letter-spacing: -1px;
 	padding-bottom: 24px;
 	color: white;
@@ -1026,7 +1017,7 @@ ul#nav li.current a:after {
 }
 
 #hero-slider .slides .flex-caption h3 {
-	font: 18px/1.9 "merriweather-light", sans-serif;
+	font: 18px/1.9 "Ubuntu", sans-serif;
 	color: rgba(255, 255, 255, 0.7);
 	text-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
 	width: 85%;
@@ -1065,7 +1056,7 @@ ul#nav li.current a:after {
 
 @media only screen and (max-width:1200px) {
 	#hero-slider .slides .flex-caption h1 {
-		font: 44px/1.3 "raleway-bold", sans-serif;
+		font: 44px/1.3 "Ubuntu-bold", sans-serif;
 	}
 
 }
@@ -1087,7 +1078,7 @@ ul#nav li.current a:after {
 	}
 
 	#hero-slider .slides .flex-caption h1 {
-		font: 43px/1.3 "raleway-bold", sans-serif;
+		font: 43px/1.3 "Ubuntu-bold", sans-serif;
 	}
 
 	#hero-slider .slides .flex-caption h1::after {
@@ -1096,7 +1087,7 @@ ul#nav li.current a:after {
 	}
 
 	#hero-slider .slides .flex-caption h3 {
-		font: 16px/1.9 "merriweather-light", sans-serif;
+		font: 16px/1.9 "Ubuntu", sans-serif;
 		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
@@ -1123,11 +1114,11 @@ ul#nav li.current a:after {
 	}
 
 	#hero-slider .slides .flex-caption h1 {
-		font: 41px/1.3 "raleway-bold", sans-serif;
+		font: 41px/1.3 "Ubuntu-bold", sans-serif;
 	}
 
 	#hero-slider .slides .flex-caption h3 {
-		font: 16px/1.9 "merriweather-light", sans-serif;
+		font: 16px/1.9 "Ubuntu", sans-serif;
 		width: 85%;
 	}
 
@@ -1148,11 +1139,11 @@ ul#nav li.current a:after {
 	}
 
 	#hero-slider .slides .flex-caption h1 {
-		font: 39px/1.3 "raleway-bold", sans-serif;
+		font: 39px/1.3 "Ubuntu-bold", sans-serif;
 	}
 
 	#hero-slider .slides .flex-caption h3 {
-		font: 15px/1.9 "merriweather-light", sans-serif;
+		font: 15px/1.9 "Ubuntu", sans-serif;
 		width: 90%;
 	}
 
@@ -1173,7 +1164,7 @@ ul#nav li.current a:after {
 	}
 
 	#hero-slider .slides .flex-caption h1 {
-		font: 36px/1.3 "raleway-bold", sans-serif;
+		font: 36px/1.3 "Ubuntu-bold", sans-serif;
 	}
 
 	#hero-slider .slides .flex-caption h3 {
@@ -1196,7 +1187,7 @@ ul#nav li.current a:after {
 	}
 
 	#hero-slider .slides .flex-caption h1 {
-		font: 30px/1.3 "raleway-bold", sans-serif;
+		font: 30px/1.3 "Ubuntu-bold", sans-serif;
 	}
 
 }
@@ -1255,7 +1246,7 @@ ul#nav li.current a:after {
 }
 
 #hero #more a {
-	font: 12px/54px "raleway-heavy", sans-serif;
+	font: 12px/54px "Ubuntu", sans-serif;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -1424,7 +1415,7 @@ ul#nav li.current a:after {
 }
 
 .folio-item .portfolio-item-meta h5 {
-	font: 14px/21px "raleway-bold", sans-serif;
+	font: 14px/21px "Ubuntu-bold", sans-serif;
 	letter-spacing: 2px;
 	color: white;
 	margin: 0;
@@ -1466,7 +1457,7 @@ ul#nav li.current a:after {
 	}
 
 	.folio-item .portfolio-item-meta h5 {
-		font: 13px/21px "raleway-bold", sans-serif;
+		font: 13px/21px "Ubuntu-bold", sans-serif;
 		letter-spacing: 1px;
 	}
 
@@ -1482,7 +1473,7 @@ ul#nav li.current a:after {
 	}
 
 	.folio-item .portfolio-item-meta h5 {
-		font: 11px/18px "raleway-bold", sans-serif;
+		font: 11px/18px "Ubuntu-bold", sans-serif;
 		letter-spacing: 1px;
 	}
 
@@ -1515,19 +1506,19 @@ ul#nav li.current a:after {
 }
 
 .popup-modal .description-box h4 {
-	font: 15px/24px "raleway-heavy", sans-serif;
+	font: 15px/24px "Ubuntu", sans-serif;
 	color: #000000;
 }
 
 .popup-modal .description-box p {
-	font: 14px/24px "merriweather-regular", serif;
+	font: 14px/24px "Ubuntu", serif;
 	color: #A1A1A1;
 	margin-bottom: 12px;
 }
 
 /* categories */
 .popup-modal .categories {
-	font: 11px/18px "raleway-heavy", sans-serif;
+	font: 11px/18px "Ubuntu", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	display: block;
@@ -1543,7 +1534,7 @@ ul#nav li.current a:after {
 }
 
 .popup-modal .link-box a {
-	font: 12px/60px "raleway-heavy", sans-serif;
+	font: 12px/60px "Ubuntu", sans-serif;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -1695,7 +1686,7 @@ ul#nav li.current a:after {
 }
 
 #services .service-list h3 {
-	font: 18px/36px "raleway-heavy", sans-serif;
+	font: 18px/36px "Ubuntu", sans-serif;
 	color:#00b1d8;
 	padding: 0;
 	text-transform: none;
@@ -1751,7 +1742,7 @@ ul#nav li.current a:after {
 }
 
 #about h3 {
-	font: 18px/36px "raleway-heavy", sans-serif;
+	font: 18px/36px "Ubuntu", sans-serif;
 	color:#00b1d8;
 	text-transform: none;
 	letter-spacing: 0;
@@ -1926,7 +1917,7 @@ ul#nav li.current a:after {
 }
 
 #call-to-action p {
-	font: 20px/36px "merriweather-light", serif;
+	font: 20px/36px "Ubuntu", serif;
 	color: #707273;
 	width: 75%;
 }
@@ -1937,7 +1928,7 @@ ul#nav li.current a:after {
 }
 
 #call-to-action h2 {
-	font: 30px/36px "raleway-bold", sans-serif;
+	font: 30px/36px "Ubuntu-bold", sans-serif;
 	color: #FFFFFF;
 	letter-spacing: -0.5px;
 	margin-bottom: 24px;
@@ -1957,7 +1948,7 @@ ul#nav li.current a:after {
 }
 
 #call-to-action .action a {
-	font: 15px/60px "raleway-heavy", sans-serif;
+	font: 15px/60px "Ubuntu", sans-serif;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -1990,11 +1981,11 @@ ul#nav li.current a:after {
 	}
 
 	#call-to-action h2 {
-		font: 28px/36px "raleway-bold", sans-serif;
+		font: 28px/36px "Ubuntu-bold", sans-serif;
 	}
 
 	#call-to-action p {
-		font: 18px/33px "merriweather-light", serif;
+		font: 18px/33px "Ubuntu", serif;
 		width: 80%;
 	}
 
@@ -2007,11 +1998,11 @@ ul#nav li.current a:after {
 	}
 
 	#call-to-action h2 {
-		font: 26px/36px "raleway-bold", sans-serif;
+		font: 26px/36px "Ubuntu-bold", sans-serif;
 	}
 
 	#call-to-action p {
-		font: 16px/30px "merriweather-light", serif;
+		font: 16px/30px "Ubuntu", serif;
 	}
 
 }
@@ -2045,7 +2036,7 @@ ul#nav li.current a:after {
 }
 
 #testimonial-slider p {
-	font: 27px/1.9 "merriweather-regular", sans-serif;
+	font: 27px/1.9 "Ubuntu", sans-serif;
 	color: #FFFFFF;
 	padding: 0;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -2053,7 +2044,7 @@ ul#nav li.current a:after {
 
 #testimonial-slider .testimonial-author {
 	display: block;
-	font: 16px/24px "raleway-heavy", sans-serif;
+	font: 16px/24px "Ubuntu", sans-serif;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	margin-top: 24px;
@@ -2078,7 +2069,7 @@ ul#nav li.current a:after {
 
 #testimonial-slider .testimonial-author .author-info span {
 	display: block;
-	font: 14px/18px "raleway-bold", sans-serif;
+	font: 14px/18px "Ubuntu-bold", sans-serif;
 	letter-spacing: 0;
 	text-transform: none;
 	color: rgba(0, 0, 0, 0.6);
@@ -2129,7 +2120,7 @@ ul#nav li.current a:after {
 	}
 
 	#testimonial-slider p {
-		font: 25px/1.9 "merriweather-regular", sans-serif;
+		font: 25px/1.9 "Ubuntu", sans-serif;
 	}
 
 }
@@ -2140,7 +2131,7 @@ ul#nav li.current a:after {
 	}
 
 	#testimonial-slider p {
-		font: 22px/1.9 "merriweather-regular", sans-serif;
+		font: 22px/1.9 "Ubuntu", sans-serif;
 	}
 
 }
@@ -2151,11 +2142,11 @@ ul#nav li.current a:after {
 	}
 
 	#testimonial-slider p {
-		font: 20px/1.9 "merriweather-regular", sans-serif;
+		font: 20px/1.9 "Ubuntu", sans-serif;
 	}
 
 	#testimonial-slider .testimonial-author {
-		font: 14px/24px "raleway-heavy" sans-serif;
+		font: 14px/24px "Ubuntu" sans-serif;
 	}
 
 	#testimonial-slider .testimonial-author img {
@@ -2165,7 +2156,7 @@ ul#nav li.current a:after {
 	}
 
 	#testimonial-slider .testimonial-author .author-info span {
-		font: 12px/18px "raleway-bold", sans-serif;
+		font: 12px/18px "Ubuntu-bold", sans-serif;
 	}
 
 }
@@ -2176,7 +2167,7 @@ ul#nav li.current a:after {
 	}
 
 	#testimonial-slider p {
-		font: 18px/1.9 "merriweather-regular", sans-serif;
+		font: 18px/1.9 "Ubuntu", sans-serif;
 	}
 
 }
@@ -2194,7 +2185,7 @@ ul#nav li.current a:after {
 }
 
 #contact h3 {
-	font: 18px/36px "raleway-heavy", sans-serif;
+	font: 18px/36px "Ubuntu", sans-serif;
 	color:#00b1d8;
 	padding: 0;
 	margin-bottom: 6px;
@@ -2232,7 +2223,7 @@ ul#nav li.current a:after {
 	}
 
 	#contact .right p.lead {
-		font: 18px/36px "merriweather-light", serif;
+		font: 18px/36px "Ubuntu", serif;
 	}
 
 }
@@ -2244,7 +2235,7 @@ ul#nav li.current a:after {
 	}
 
 	#contact .right p.lead {
-		font: 17px/33px "merriweather-light", serif;
+		font: 17px/33px "Ubuntu", serif;
 	}
 
 }
@@ -2278,7 +2269,7 @@ ul#nav li.current a:after {
 }
 
 #contact form div label {
-	font: 11px/24px "raleway-bold", sans-serif;
+	font: 11px/24px "Ubuntu-bold", sans-serif;
 	position: absolute;
 	bottom: 3px;
 	right: 6px;
@@ -2299,7 +2290,7 @@ input[type="email"],
 }
 
 #contact button.submitform {
-	font: 15px/30px "raleway-heavy", sans-serif;
+	font: 15px/30px "Ubuntu", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	height: 60px;
@@ -2344,7 +2335,7 @@ input[type="email"],
 
 #submit-loader .text-loader {
 	display: none;
-	font: 14px/30px "raleway-heavy", sans-serif;
+	font: 14px/30px "Ubuntu", sans-serif;
 	color: #FFFFFF;
 	letter-spacing: 3px;
 	text-transform: uppercase;
@@ -2599,7 +2590,7 @@ footer .social-links li:first-child {
 	color: #FFFFFF;
 	text-align: center;
 	border-radius: 3px;
-	font: 12px/54px "raleway-heavy", sans-serif;
+	font: 12px/54px "Ubuntu", sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	-moz-transition: all 0.3s ease-in-out;

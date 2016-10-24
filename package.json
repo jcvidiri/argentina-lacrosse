@@ -1,0 +1,28 @@
+{
+  "name": "argentina-lacrosse",
+  "version": "1.0.0",
+  "author": "JCV",
+  "license": "MIT",
+  "description": "Argentina Lacrosse",
+  "repository" :
+  { "type" : "git",
+    "url" : "https://github.com/jcvidiri/argentina-lacrosse.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "gulp-imagemin": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-clean":"*",
+    "gulp-cssnano":"*",
+    "gulp-rename":"*",
+    "gulp-htmlmin":"*",
+    "gulp-inject": "*",
+    "bower-files": "*",
+    "wiredep":"*",
+    "del":"*"
+  }
+}
