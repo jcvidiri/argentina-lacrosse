@@ -16,7 +16,6 @@ var files = {
     jsMain: 'js/*.js',
     styles: 'css/*.*',
     images: 'images/**/*.*',
-    fonts: 'fonts/**/*.*',
     index: 'index.html',
     home:  'home.html',
 };
@@ -31,7 +30,7 @@ gulp.task('inject-libs', function() {
     .pipe(inject(gulp.src([files.jsMain, files.styles], { read: false }), { relative: true }))
     .pipe(wiredep())
     .pipe(rename('index.html'))
-    .pipe(gulp.dest('src'));
+    .pipe(gulp.dest());
 });
 
 gulp.task('css-custom', function() {
@@ -62,11 +61,6 @@ gulp.task('css-libs', function() {
     .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('fonts-custom', function() {
-  return gulp.src(files.fonts)
-    .pipe(gulp.dest('build/fonts'));
-});
-
 gulp.task('images', function() {
   return gulp.src(files.images)
     .pipe(minifyImgs())
@@ -78,12 +72,12 @@ gulp.task('clean-directories', function() {
     .pipe(clean());
 });
 
-gulp.task('prepare-libs', ['js-libs', 'css-libs', 'css-custom', 'js-custom', 'fonts-custom', 'images']);
+gulp.task('prepare-libs', ['js-libs', 'css-libs', 'css-custom', 'js-custom', 'images']);
 
 gulp.task('build', ['prepare-libs', 'clean-directories'], function() {
   return gulp.src(files.home)
     .pipe(inject(gulp.src([minifiedFiles.lib, minifiedFiles.custom], { read: false, cwd: __dirname + '/build' }), { addRootSlash: false }))
-    .pipe(rename('home.html'))
+    .pipe(rename('index.html'))
     .pipe(minifyHTML({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 });
