@@ -3,6 +3,11 @@ var gulp = require('gulp'),
     minifyCss  = require('gulp-cssnano'),
     minifyJs   = require('gulp-uglify'),
     minifyImgs = require('gulp-imagemin'),
+
+    imagemin   = require('imagemin'),
+    imageminMozjpeg = require('imagemin-mozjpeg'),
+    imageminPngquant = require('imagemin-pngquant'),
+
     rename     = require('gulp-rename'),
     lib        = require('bower-files')(),
     concat     = require('gulp-concat'),
@@ -62,9 +67,17 @@ gulp.task('css-libs', function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src(files.images)
-    .pipe(minifyImgs())
-    .pipe(gulp.dest('build/images'));
+  imagemin(['images/*.{jpeg,png}'], 'build/images', { plugins: [imageminMozjpeg(), imageminPngquant({quality: '65-80'})] })
+    .then( function() {
+      imagemin(['images/portfolio/*.{jpeg,png}'], 'build/images/portfolio', { plugins: [imageminMozjpeg(), imageminPngquant({quality: '65-80'})] })
+      .then( function() {
+        imagemin(['images/portfolio/modals/*.{jpeg,png}'], 'build/images/portfolio/modals', { plugins: [imageminMozjpeg(), imageminPngquant({quality: '65-80'})] })
+        .then( function() {
+          imagemin(['images/teams/*.{jpeg,png}'], 'build/images/teams', { plugins: [imageminMozjpeg(), imageminPngquant({quality: '65-80'})] });
+      })
+    })
+  })
+
 });
 
 gulp.task('clean-directories', function() {
@@ -74,7 +87,7 @@ gulp.task('clean-directories', function() {
 
 gulp.task('prepare-libs', ['js-libs', 'css-libs', 'css-custom', 'js-custom', 'images']);
 
-gulp.task('build', ['prepare-libs', 'clean-directories'], function() {
+gulp.task('build', ['clean-directories', 'prepare-libs'], function() {
   return gulp.src(files.home)
     .pipe(inject(gulp.src([minifiedFiles.lib, minifiedFiles.custom], { read: false, cwd: __dirname + '/build' }), { addRootSlash: false }))
     .pipe(rename('index.html'))
