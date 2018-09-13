@@ -23,9 +23,9 @@
     "gulp-imagemin": "*",
     "gulp-inject": "*",
     "gulp-rename": "*",
-    "gulp-sourcemaps": "*",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "*",
-    "imagemin-pngquant": "^5.0.1",
+    "imagemin-pngquant": "^5.1.0",
     "wiredep": "*"
   }
 }
